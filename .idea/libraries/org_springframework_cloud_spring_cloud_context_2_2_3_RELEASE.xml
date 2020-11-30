@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="org.springframework.cloud:spring-cloud-context:2.2.3.RELEASE" type="repository">
+    <properties maven-id="org.springframework.cloud:spring-cloud-context:2.2.3.RELEASE" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/spring-cloud-context-2.2.3.RELEASE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/spring-security-crypto-5.3.2.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
