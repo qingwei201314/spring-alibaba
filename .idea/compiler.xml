@@ -9,6 +9,7 @@
         <module name="consumer" />
         <module name="gateway" />
         <module name="spring-boot" />
+        <module name="springwebflux" />
       </profile>
     </annotationProcessing>
   </component>

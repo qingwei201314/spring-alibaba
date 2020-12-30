@@ -6,6 +6,9 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
+import javax.servlet.http.HttpServletRequest;
+import java.util.Date;
+
 /**
  *  Nacos 消费端
  *  @Author: Kevin Zhang @Date: 2020-11-25 10:15
@@ -19,7 +22,8 @@ public class ConsumerController {
     private ConsumerService consumerService;
 
     @RequestMapping(value = "/echo/{str}", method = RequestMethod.GET)
-    public String echo(@PathVariable String str) {
+    public String echo(@PathVariable String str, HttpServletRequest request) {
+        System.out.println("已调用成功" + new Date() + ",IP:" + request.getRemoteAddr());
         return restTemplate.getForObject("http://spring-boot/echo/" + str, String.class);
     }
 

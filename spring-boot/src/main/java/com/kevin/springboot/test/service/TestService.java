@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 public class TestService {
 
     @SentinelResource(value = "getString")
-    public String getString(){
+    public String getString()  {
         return "Hello Kevin.";
     }
 }

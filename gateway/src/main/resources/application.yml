@@ -4,9 +4,23 @@ spring:
   application:
     name: gateway
   cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+    nacos:
+      discovery:
+        server-addr: 192.168.86.130:8848
     gateway:
       routes:
-      - id: path_route
-        uri: http://127.0.0.1:8081
+      - id: remoteaddr_route
+        uri: http://192.168.86.130:8081
         predicates:
-        - Path=/echo/*
+        - RemoteAddr=172.26.7.1/24
+      - id: myRoute
+        uri: lb://consumer
+        predicates:
+        - Path=/echo/**
+      - id: websocket_route
+        uri: lb:ws://consumer
+        predicates:
+        - Path=/webSocket/**

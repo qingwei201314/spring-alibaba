@@ -1,8 +1,10 @@
 package com.kevin.consumer;
 
 import com.alibaba.cloud.sentinel.annotation.SentinelRestTemplate;
-import com.alibaba.nacos.common.utils.ExceptionUtil;
+import com.kevin.consumer.test.controller.ConsumerController;
 import com.kevin.consumer.util.ConsumerExceptionUtil;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
@@ -15,6 +17,8 @@ import org.springframework.web.client.RestTemplate;
 **/
 @SpringBootApplication(scanBasePackages = {"com.kevin.consumer"})
 public class ConsumerApplication {
+    private static Logger log = LoggerFactory.getLogger(ConsumerController.class);
+
     @LoadBalanced
     @Bean
     @SentinelRestTemplate(blockHandler = "handleException", blockHandlerClass = ConsumerExceptionUtil.class)
