@@ -1,15 +1,12 @@
 package com.kevin.springboot;
 
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.ComponentScan;
 
 /**
  *  Spring boot 的demo类
  *  @Author: Kevin Zhang @Date: 2020-11-23 16:56
 **/
-
 @SpringBootApplication(scanBasePackages = {"com.kevin.springboot"})
 public class SpringBoot {
     public static void main(String[] args) {
