@@ -3,9 +3,7 @@ package com.kevin.springboot.test.controller;
 import com.kevin.springboot.Utils.ErrorEnum;
 import com.kevin.springboot.Utils.Errors;
 import com.kevin.springboot.Utils.ValidateException;
-import com.kevin.springboot.test.vo.Person;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
